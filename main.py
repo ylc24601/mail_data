@@ -37,12 +37,14 @@ def send_mail(send_from, send_to, subject, text, files=None,
 today = date.today()
 st.title("Mail Your Data")
 st.info("請自行修改以下欄位")
-mail_option = st.radio("Options", ('Mail Address List', 'Type Your Own'))
-if mail_option == 'Mail Address List':
-    mail_address = st.multiselect("To whom", ['ylc7305@gmail.com', "ylchang@mail.ndmctsgh.edu.tw"])
+mail_option = st.radio("Provide Email Address", ('From Mail Address List', 'Type Your Own'), horizontal=True)
+
+if mail_option == 'From Mail Address List':
+    mail_address = st.multiselect("To whom", ["ylchang@mail.ndmctsgh.edu.tw", "zyliu0712@gmail.com", "cutlinda1200@gmail.com"])
 else:
     single_mail = st.text_input("Your email address")
     mail_address = [single_mail]
+
 title = st.text_input("主旨: ", value=f"{today}_Skanit 分析結果")
 # content = st.text_area("信件內容: ", value="")
 content = st.text_area('信件內容: ',
