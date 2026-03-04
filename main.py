@@ -40,7 +40,7 @@ st.info("請自行修改以下欄位")
 mail_option = st.radio("Provide Email Address", ('From Mail Address List', 'Type Your Own'), horizontal=True)
 
 if mail_option == 'From Mail Address List':
-    mail_address = st.multiselect("To whom", ["ylchang@mail.ndmctsgh.edu.tw", "zyliu0712@gmail.com", "cutlinda1200@gmail.com"])
+    mail_address = st.multiselect("To whom", ["ylchang@mail.ndmctsgh.edu.tw", "jklan0721@gmail.com"])
 else:
     single_mail = st.text_input("Your email address")
     mail_address = [single_mail]
